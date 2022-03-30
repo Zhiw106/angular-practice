@@ -1,0 +1,18 @@
+<h2>Output Child Component</h2>
+<label for="item-input">Add an item:</label>
+<input id="item-input" type="text" #newItem>
+<br>
+<br>
+<button (click)="addNewItem(newItem.value)">Add a new item to parent component</button>
+<br>
+<br>
+<!--<button name="'test" (click)="show($event)">Click Me</button>-->
+<br>
+<br>
+<!--<div>You clicked me: {{counter}}</div>-->
+<br>
+<br>
+<div>{{newItem.value}}</div>
+<br>
+<br>
+<!--<div>{{eventValue}}</div>-->

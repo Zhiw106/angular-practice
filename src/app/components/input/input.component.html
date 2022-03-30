@@ -1,0 +1,13 @@
+<h1>Child component with @Input()</h1>
+<div>Today's item: {{child[0]}}</div>
+
+<img src="" [alt]="child[0]">
+<hr>
+<img [src]="photos[0]">
+<hr>
+<img src="{{photos[0]}}" alt="">
+<hr>
+<p>{{photos[0]}}</p>
+<hr>
+<div><img [src]="photos[currentPhoto]"></div>
+<button (click)="toggleImage($event)">Toggle Image</button>

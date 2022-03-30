@@ -1,0 +1,93 @@
+<p>two-way-data-binding works!</p>
+<div>
+  <h1>Student Form</h1>
+
+  <!-- #stdForm='ngForm' able to access values in the form as in   {{stdForm.value.email}} -->
+  <form #stdForm="ngForm" (ngSubmit)="onSubmit(stdForm)">
+    {{ showData() }}
+    <br />
+    <br />
+    <div class="form-group">
+      <label class="control-label" for="name">Student Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        value=""
+        #std_name="ngModel"
+        [(ngModel)]="student.name"
+        required
+        maxlength="40"
+        minlength="2"
+        pattern="[a-zA-Z0-9]*"
+      />
+      <br />
+      <div *ngIf="std_name.invalid">
+        <div class="alert">Error</div>
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+      <label class="control-label" for="email">Student Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        value=""
+        #email
+        [(ngModel)]="student.email"
+      />
+    </div>
+    <br />
+
+    <div ngModelGroup="address">
+      <div class="form-group">
+        <label class="control-label" for="street">Student Street:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="street"
+          name="street"
+          value=""
+          #street
+          [(ngModel)]="student.address.street"
+        />
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="">Student City</label>
+        <select name="city" id="" [(ngModel)]="student.address.city">
+          <option value="">Select city</option>
+          <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <!-- use valid to submit the form, if value is false, the submit will be disabled -->
+    <div class="form-group">
+      <input
+        type="submit"
+        class="form-control"
+        id="name"
+        name="submit"
+        value="update"
+        [disabled]="!stdForm.form.valid"
+      />
+    </div>
+    <br />
+  </form>
+
+  <br />
+  the template value is: {{ stdForm.value | json }}
+  <br />
+  the submitted value is{{ student_submitted | json }}
+  <br />
+  valid: {{ stdForm.form.valid }}
+  <!-- Tracking the “state” of elements using CSS classes -->
+  <!-- ng-untouched ng-pristine ng-valid -->
+  <!-- ng-touched ng-dirty ng-invalid -->
+  <br />
+</div>

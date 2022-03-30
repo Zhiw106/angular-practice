@@ -1,0 +1,6 @@
+<p>test4 works!</p>
+<div *ngIf="student">
+  <ul *ngFor="let std of student">
+    <li [class]="std.major">{{ std.name }}: {{ std.major }}</li>
+  </ul>
+</div>

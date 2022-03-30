@@ -1,0 +1,26 @@
+<h2>To do list</h2>
+<div class="todolist">
+  <input type="text" [(ngModel)]="keyword" (keyup)="doAdd($event)" />
+  <hr />
+  <h3>To do</h3>
+  <ul>
+    <li *ngFor="let item of todolist; let key = index" [hidden]="item.status==1">
+     <input type="checkbox" [(ngModel)]="item.status" /> {{ item.title }} ----------<button
+        (click)="deleteHistory(key)"
+      >
+        delete
+      </button>
+    </li>
+  </ul>
+  <br />
+  <h3>Completed</h3>
+  <ul>
+    <li *ngFor="let item of todolist; let key = index" [hidden]="item.status==0">
+     <input type="checkbox" [(ngModel)]="item.status" /> {{ item.title }} ----------<button
+        (click)="deleteHistory(key)"
+      >
+        delete
+      </button>
+    </li>
+  </ul>
+</div>

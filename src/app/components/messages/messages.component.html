@@ -1,0 +1,7 @@
+<p>messages works!</p>
+<div *ngIf="messages">
+  <button (click)="LogMessage.clearMsg()">Clear</button>
+  <div *ngFor="let message of LogMessage.msg">
+    {{ message }}
+  </div>
+</div>

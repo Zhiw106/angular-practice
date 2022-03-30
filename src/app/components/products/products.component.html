@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Select</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let product of products">
+    <tr>
+      <td>
+        <!-- link to redirect -->
+        <a [routerLink]="['/product', product.id]">{{ product.id }}</a>
+      </td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.email }}</td>
+      <td><button (click)="onSelect(product)">Select</button></td>
+      <!-- <td><button>Select</button></td> -->
+      
+      <!-- function to redirect -->
+      <td><button (click)="navTo($event, product.id)">Show student</button></td>
+    </tr>
+  </tbody>
+</table>
+<div></div>
