@@ -27,6 +27,7 @@
     type="text"
     id="year"
     name="year"
+    required
     pattern="\s*[0-9]{4}\s*"
     placeholder="four digits number"
     [(ngModel)]="year"
@@ -35,5 +36,10 @@
   <br />
   <input type="submit" value="submit" />
 </form>
-
+<div id="errors" *ngIf="bridgeForm.invalid && bridgeForm.touched">
+  <p *ngIf="bridgeId.invalid">An ID is required</p>
+  <p *ngIf="bridgeName.invalid">A name is required</p>
+  <p *ngIf="bridgeYear.errors?.['required']">A year is required</p>
+  <p *ngIf="bridgeYear.errors?.['pattern']">A year must be four digits in length</p>
+</div>
 <p>The template value is {{ bridgeForm.value | json }}</p>
