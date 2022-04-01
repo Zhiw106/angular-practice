@@ -1,1 +1,39 @@
-<p>form works!</p>
+<form id="bridge-form" #bridgeForm="ngForm" (ngSubmit)="onSubmit(bridgeForm)">
+  <label for="id">ID</label>
+  <input
+    type="text"
+    id="id"
+    name="id"
+    placeholder="bridge-322-123-C"
+    required
+    autofocus
+    [(ngModel)]="id"
+    #bridgeId="ngModel"
+  />
+  <br />
+  <label for="name">Name</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder=""
+    required
+    [(ngModel)]="name"
+    #bridgeName="ngModel"
+  />
+  <br />
+  <label for="year">Year</label>
+  <input
+    type="text"
+    id="year"
+    name="year"
+    pattern="\s*[0-9]{4}\s*"
+    placeholder="four digits number"
+    [(ngModel)]="year"
+    #bridgeYear="ngModel"
+  />
+  <br />
+  <input type="submit" value="submit" />
+</form>
+
+<p>The template value is {{ bridgeForm.value | json }}</p>

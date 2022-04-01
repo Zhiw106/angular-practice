@@ -53,13 +53,13 @@
           name="street"
           value=""
           #street
-          [(ngModel)]="student.address.street"
+          [(ngModel)]="student.street"
         />
       </div>
       <br />
       <div class="form-group">
         <label for="">Student City</label>
-        <select name="city" id="" [(ngModel)]="student.address.city">
+        <select name="city" id="" [(ngModel)]="student.city">
           <option value="">Select city</option>
           <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
         </select>
@@ -73,7 +73,6 @@
         class="form-control"
         id="name"
         name="submit"
-        value="update"
         [disabled]="!stdForm.form.valid"
       />
     </div>

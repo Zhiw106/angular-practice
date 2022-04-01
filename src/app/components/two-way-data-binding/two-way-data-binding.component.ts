@@ -5,7 +5,8 @@ export class Student {
   constructor(
     public name: string,
     public email: string,
-    public address:any
+    public city:string,
+    public street:string
   ) {}
 }
 
@@ -18,11 +19,11 @@ export class TwoWayDataBindingComponent implements OnInit {
 
   cities = ['Toronto', 'Los Angeles', 'Ottawa', 'Vancouver'];
 
-  address = new FormControl({ city: this.cities[0], street: '' });
+  //address = new FormControl({ city: this.cities[0], street: '' });
 
-  student = new Student('Zhiwei', '222@888.com', this.address);
+  student = new Student('Zhiwei', '222@888.com',  this.cities[0], '');
 
-  student_submitted = new Student('', '', this.address.value);
+  student_submitted = new Student('', '', this.cities[0],'');
   
   showData() {
     return JSON.stringify(this.student);
@@ -31,8 +32,8 @@ export class TwoWayDataBindingComponent implements OnInit {
   onSubmit(form: NgForm) {
     this.student_submitted.name = form.value.name;
     this.student_submitted.email = form.value.email;
-    this.student_submitted.address.city = form.value.address.city;
-    this.student_submitted.address.street = form.value.address.street;
+    this.student_submitted.city = form.value.address.city;
+    this.student_submitted.street = form.value.address.street;
     console.log(this.student_submitted);
   }
   constructor() {}
