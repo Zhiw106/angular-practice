@@ -23,11 +23,12 @@ import { PageComponent } from './components/page/page.component';
 import { ClassComponent } from './components/class/class.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { Test4Component } from './components/test4/test4.component';
-import { FormComponent } from './components/form/form.component';
+import { FormComponent } from './components/template-driven-form/form.component';
 import { StudentComponent } from './components/student/student.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 @NgModule({
-  declarations: [AppComponent, PracticeComponent, SearchComponent, TodolistComponent, InputComponent, OutputComponent, InputOutputComponent, BindingComponent, TwoWayDataBindingComponent, DirectivesComponent, ProductsComponent, ProductComponent, PageComponent, ClassComponent, MessagesComponent, Test4Component, FormComponent, StudentComponent],
+  declarations: [AppComponent, PracticeComponent, SearchComponent, TodolistComponent, InputComponent, OutputComponent, InputOutputComponent, BindingComponent, TwoWayDataBindingComponent, DirectivesComponent, ProductsComponent, ProductComponent, PageComponent, ClassComponent, MessagesComponent, Test4Component, FormComponent, StudentComponent, ReactiveFormComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,ReactiveFormsModule],
   providers: [StorageService],
   bootstrap: [AppComponent],

@@ -1,7 +1,0 @@
-input:focus.ng-valid{
-    outline: 1px solid green;
-}
-
-input:focus.ng-invalid{
-    outline: 1px solid red;
-}

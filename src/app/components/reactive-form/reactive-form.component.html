@@ -1,0 +1,35 @@
+<form id="bridge-form" [formGroup]="bridgeForm" (ngSubmit)="onSubmit()">
+  <label for="id">ID</label>
+  <input
+    type="text"
+    id="id"
+    name="id"
+    placeholder="bridge-322-123-C"
+    formControlName="id"
+  />
+  <br />
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" formControlName="name" />
+  <br />
+  <label for="year">Year</label>
+  <input
+    type="text"
+    id="year"
+    name="year"
+    placeholder="four digits number"
+    formControlName="year"
+  />
+  <br />
+  <input type="submit" value="submit" />
+</form>
+<div id="errors" *ngIf="!bridgeForm.valid && bridgeForm.dirty">
+  <p *ngIf="bridgeForm.controls['id'].invalid">An ID is required</p>
+  <p *ngIf="bridgeForm.controls['name'].invalid">A name is required</p>
+  <p *ngIf="bridgeForm.controls['year'].errors?.['required']">
+    A year is required
+  </p>
+  <p *ngIf="bridgeForm.controls['year'].errors?.['pattern']">
+    A year must be four digits in length
+  </p>
+</div>
+<p>The template value is {{ bridgeForm.value | json }}</p>

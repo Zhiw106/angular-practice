@@ -8,8 +8,9 @@ import {OutputComponent} from "./components/output/output.component";
 import {InputComponent} from "./components/input/input.component";
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
 import { Test4Component } from './components/test4/test4.component';
-import { FormComponent } from './components/form/form.component';
+import { FormComponent } from './components/template-driven-form/form.component';
 import { StudentComponent } from './components/student/student.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {path:"practice",component:PracticeComponent},
@@ -19,10 +20,11 @@ const routes: Routes = [
   {path:"product/:id",component:ProductComponent},
   {path:"output",component:OutputComponent},
   {path:"input",component:InputComponent},
-  {path:'twowaybinding',component:TwoWayDataBindingComponent},
+  {path:'two-way-binding',component:TwoWayDataBindingComponent},
   {path:'test4',component:Test4Component},
   {path:'form',component:FormComponent},
-  {path:'student',component:StudentComponent}
+  {path:'student',component:StudentComponent},
+  {path:'reactive-form',component:ReactiveFormComponent}
   // {path:"**",component:NotFoundComponent}
   // {path:"room/:id",component:RoomComponent},
   // {path:"hotels",component:HotelsComponent},
