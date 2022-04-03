@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PracticeComponent } from './components/practice/practice.component';
-import { BindingComponent } from './components/binding/binding.component';
-import { ProductsComponent } from './components/products/products.component';
-import { ProductComponent } from './components/product/product.component';
-import { OutputComponent } from './components/output/output.component';
-import { InputComponent } from './components/input/input.component';
-import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
-import { Test4Component } from './components/test4/test4.component';
-import { FormComponent } from './components/template-driven-form/form.component';
-import { StudentComponent } from './components/student/student.component';
-import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
-import { AngularMaterialComponent } from './components/angular-material/angular-material.component';
+import { PracticeComponent } from './practice/practice.component';
+import { BindingComponent } from './binding/binding.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './product/product.component';
+import { OutputComponent } from './output/output.component';
+import { InputComponent } from './input/input.component';
+import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
+import { Test4Component } from './test4/test4.component';
+import { FormComponent } from './template-driven-form/form.component';
+import { StudentComponent } from './student/student.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
 
 const routes: Routes = [
   { path: 'practice', component: PracticeComponent },
