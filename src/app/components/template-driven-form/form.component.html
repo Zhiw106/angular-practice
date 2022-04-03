@@ -40,6 +40,8 @@
   <p *ngIf="bridgeId.invalid">An ID is required</p>
   <p *ngIf="bridgeName.invalid">A name is required</p>
   <p *ngIf="bridgeYear.errors?.['required']">A year is required</p>
-  <p *ngIf="bridgeYear.errors?.['pattern']">A year must be four digits in length</p>
+  <p *ngIf="bridgeYear.errors?.['pattern']">
+    A year must be four digits in length
+  </p>
 </div>
 <p>The template value is {{ bridgeForm.value | json }}</p>

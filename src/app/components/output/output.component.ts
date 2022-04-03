@@ -7,6 +7,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class OutputComponent implements OnInit {
   @Input() item = ''
+ 
   @Output() newItemEvent = new EventEmitter<string>()
 
   counter: number = 0
@@ -22,9 +23,11 @@ export class OutputComponent implements OnInit {
     this.counter = this.counter + 1
     this.eventValue = event.target.value
     console.log(this.item);
+ 
   }
 
   addNewItem(value: string) {
     this.newItemEvent.emit(value)
+    
   }
 }

@@ -11,13 +11,10 @@ export class LogMessagesService {
   addNewMsg(message: string) {
     this.msg.push(message);
     console.log(this.msg);
-    
   }
-  clearMsg(){
+  clearMsg() {
     console.log('clear');
-    this.msg=[]
+    this.msg = [];
     console.log(this.msg);
-  
-    
   }
 }
